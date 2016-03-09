@@ -1,0 +1,43 @@
+<html>
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        #div_move {
+            background: red;
+        }
+        #player_2 {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<div id="div_move">team red</div>
+<div id="player_2">team green</div>
+
+<script>
+    var player1 = document.getElementById("div_move");
+    var playerWidth = 100;
+    var player2 = document.getElementById("player_2");
+    player2.style.left = "100px";
+    player2.style.top = "100px";
+    document.onmousemove = function(e){
+        console.log(player2.style.left);
+        if (e.pageX > parseInt(player2.style.left, 10) &&
+                e.pageX < (parseInt(player2.style.left, 10) + playerWidth) &&
+                e.pageY > parseInt(player2.style.top, 10) &&
+                e.pageY < (parseInt(player2.style.top, 10) + playerWidth)) {
+            player2.style.background = "#" + Math.random().toString(16).slice(2, 8);
+        } else {
+            player2.style.background = "green";
+        }
+    }
+
+</script>
+</body>
+</html>

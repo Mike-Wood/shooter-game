@@ -1,0 +1,55 @@
+
+body {
+  margin: 0;
+  text-align: center;
+  button {
+    color: black;
+  }
+  img {
+    position: absolute;
+    top: 50px;
+  }
+  #trophyP2 {
+    right: 0;
+  }
+  #trophyP1 {
+    left: 0;
+  }
+  #p1score {
+    color: red;
+    position: absolute;
+    margin: 0;
+  }
+  #p2score {
+    color: blue;
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+  .player {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    &#player1 {
+      background: red;
+    }
+
+    &#player2 {
+      background: blue;
+      left: 1800px;
+    }
+  }
+
+  .bullet {
+    width: 50px;
+    height: 20px;
+    position: absolute;
+
+    &.player2Bullet {
+      left: 1000px;
+    }
+  }
+}
+
